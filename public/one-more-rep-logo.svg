@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220">
+<rect width="520" height="220" rx="12" fill="#3b302b"/>
+<g fill="#d7b45b" font-family="Arial Black, Arial, sans-serif" font-weight="900" text-anchor="middle">
+<text x="270" y="72" font-size="66">ONE</text>
+<text x="260" y="130" font-size="66">MORE</text>
+<text x="215" y="190" font-size="66">REP</text>
+</g>
+<g fill="none" stroke="#eee8df" stroke-width="18" stroke-linecap="round">
+<path d="M72 105 H448"/>
+<path d="M70 78 L55 132 M50 78 L35 132 M450 78 L465 132 M470 78 L485 132"/>
+</g>
+<g fill="#eee8df">
+<rect x="28" y="82" width="22" height="46" rx="8"/>
+<rect x="470" y="82" width="22" height="46" rx="8"/>
+</g>
+<text x="410" y="195" fill="#eee8df" font-family="Arial, sans-serif" font-size="18" font-weight="800">FITNESS</text>
+<text x="410" y="214" fill="#eee8df" font-family="Arial, sans-serif" font-size="12" font-weight="800">UNISEX</text>
+</svg>
