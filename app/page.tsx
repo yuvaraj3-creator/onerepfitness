@@ -1,0 +1,1 @@
+export default function Home(){return <main><h1>One More Rep Fitness</h1><p>Tiruvottiyur, Chennai</p></main>}
