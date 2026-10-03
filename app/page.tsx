@@ -1,1 +1,48 @@
-import Link from 'next/link'; import {ArrowRight,Dumbbell} from 'lucide-react'; import {Shell,CTA,programs} from '../components/site'; export default function Home(){return <Shell><main><section className="hero"><div className="container heroContent"><div className="eyebrow">TIRUVOTTIYUR · CHENNAI</div><h1 className="display">MAKE YOUR <span>ONE MORE</span> REP COUNT.</h1><p>A focused, no-excuses fitness space for people who want to get stronger, move better and become more consistent.</p><div className="actions"><Link className="btn primary" href="/membership">VIEW MEMBERSHIP <ArrowRight size={16}/></Link><Link className="btn" href="/contact">BOOK A VISIT</Link></div><div className="stats"><div className="stat"><strong>01</strong><span>Mindset</span></div><div className="stat"><strong>24/7*</strong><span>Flexible training</span></div><div className="stat"><strong>100%</strong><span>Commitment</span></div></div></div></section><section className="section"><div className="container"><div className="sectionHead"><div><div className="eyebrow">WHAT WE DO</div><h2 className="display">TRAIN WITH PURPOSE.</h2></div><p>From your first session to your strongest set, every workout should have a reason.</p></div><div className="grid cards3">{programs.slice(0,3).map(([t,d])=><div className="card program" key={t}><div><Dumbbell color="#d9ff35"/><h3>{t}</h3><p>{d}</p></div><Link className="arrow" href="/programs">EXPLORE PROGRAMS →</Link></div>)}</div></div></section><section className="section"><div className="container"><div className="sectionHead"><div><div className="eyebrow">INSIDE THE GYM</div><h2 className="display">THE WORK SPEAKS.</h2></div><Link className="btn" href="/gallery">VIEW GALLERY</Link></div><div className="grid imageGrid"><div className="photo a tall"/><div className="photo b"/><div className="photo c"/><div className="photo d"/></div></div></section><CTA/></main></Shell>}
+import Link from 'next/link';
+import {ArrowRight,Dumbbell,Users,HeartPulse,Trophy,Flame} from 'lucide-react';
+import {Shell,CTA,programs} from '../components/site';
+
+const benefits=[
+  [Dumbbell,'Modern Equipment','Premium workout setup'],
+  [Users,'Expert Trainers','Personalized guidance'],
+  [HeartPulse,'Unisex Friendly','Comfortable for everyone'],
+  [Trophy,'Real Results','Build a stronger you']
+] as const;
+
+const programCards=[
+  ['Strength Training','Build strength and endurance','https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1000&q=85',Dumbbell],
+  ['Weight Loss','Burn fat, get fitter','https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=85',Flame],
+  ['Muscle Building','Gain lean muscle mass','https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=85',Dumbbell],
+  ['General Fitness','Stay active and healthy','https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=85',HeartPulse]
+];
+
+export default function Home(){
+  return <Shell><main>
+    <section className="hero">
+      <div className="heroVisual"><img src="/one-more-rep-logo.svg" alt="One More Rep Fitness Unisex" /></div>
+      <div className="container heroContent">
+        <div className="eyebrow">STRONGER TODAY. BETTER TOMORROW.</div>
+        <h1 className="display"><span>ONE MORE</span> REP<br/><b>FITNESS UNISEX</b></h1>
+        <p>A modern fitness space for everyone. Train harder, get stronger, live healthier.</p>
+        <div className="actions">
+          <Link className="btn primary" href="/programs"><Dumbbell size={17}/> EXPLORE PROGRAMS <ArrowRight size={16}/></Link>
+          <Link className="btn ghost" href="/membership">VIEW MEMBERSHIP</Link>
+        </div>
+      </div>
+    </section>
+
+    <section className="benefitBar"><div className="container benefitGrid">
+      {benefits.map(([Icon,title,desc])=><div className="benefit" key={title}><span className="benefitIcon"><Icon size={22}/></span><div><strong>{title}</strong><small>{desc}</small></div></div>)}
+    </div></section>
+
+    <section className="section programsSection"><div className="container">
+      <div className="sectionHead">
+        <div><div className="eyebrow">OUR PROGRAMS</div><h2 className="display">FITNESS FOR <span>EVERY GOAL</span></h2></div>
+        <p>Whether you want to build muscle, lose weight, improve stamina or simply stay healthy — we have the right program for you.</p>
+        <Link className="btn darkBtn" href="/programs">VIEW ALL PROGRAMS <ArrowRight size={16}/></Link>
+      </div>
+      <div className="programShowcase">{programCards.map(([title,desc,img,Icon])=><Link className="showCard" href="/programs" key={title} style={{backgroundImage:`linear-gradient(180deg,transparent 25%,rgba(25,17,12,.92) 100%),url('${img}')`}}><span className="showIcon"><Icon size={22}/></span><div><h3>{title}</h3><p>{desc}</p></div></Link>)}</div>
+    </div></section>
+    <CTA/>
+  </main></Shell>
+}
