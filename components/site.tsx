@@ -1,20 +1,16 @@
-'use client';
-
 import Link from 'next/link';
-import {usePathname} from 'next/navigation';
 import {ArrowRight,MessageCircle} from 'lucide-react';
 
 export const nav=[['Home','/'],['About','/about'],['Programs','/programs'],['Trainers','/trainers'],['Gallery','/gallery'],['Membership','/membership'],['Contact','/contact']];
 
 export function Header(){
-  const pathname=usePathname();
   return <header className="nav">
     <div className="container navin">
       <Link className="brand" href="/">
         <img className="brandLogo" src="/one-more-rep-logo.svg?v=2" alt="One More Rep Fitness" />
       </Link>
       <nav className="links">
-        {nav.map(([x,y])=><Link className={pathname===y?'active':''} key={y} href={y}>{x}</Link>)}
+        {nav.map(([x,y])=><Link key={y} href={y}>{x}</Link>)}
         <Link className="btn primary joinBtn" href="https://wa.me/918489895767"><MessageCircle size={18}/> JOIN NOW</Link>
       </nav>
       <span className="mobileMenu">MENU</span>
