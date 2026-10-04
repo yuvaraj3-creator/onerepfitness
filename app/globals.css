@@ -110,3 +110,12 @@
   .links a:not(.btn):first-child:after{background:#f0c343!important}
   .joinBtn{background:#f0c343!important;color:#2b1b12!important;border-color:#f0c343!important}
 }
+
+/* Exact dark chocolate header tone from the approved reference */
+.nav{background:#3a2114!important;border-bottom:1px solid rgba(214,180,90,.25)!important}
+@media(min-width:801px){
+  .nav{background:#3a2114!important}
+}
+@media(max-width:800px){
+  .nav{background:#3a2114!important}
+}
