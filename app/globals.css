@@ -95,3 +95,7 @@
   .showCard{min-height:300px}
   .footerIn{gap:10px}
 }
+
+/* One More Rep chocolate brand header */
+.nav{background:#3b2418!important;border-bottom:1px solid rgba(214,180,90,.28)!important}
+@media(max-width:800px){.nav{background:#3b2418!important}}
