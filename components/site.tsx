@@ -22,9 +22,7 @@ export function Header(){
           <MessageCircle size={16}/> JOIN NOW
         </Link>
         <details className="mobileMenuWrap">
-          <summary className="mobileMenu" aria-label="Open navigation">
-            <Menu size={25}/>
-          </summary>
+          <summary className="mobileMenu" aria-label="Open navigation"><span className="hamburgerIcon"><i></i><i></i><i></i></span></summary>
           <nav className="mobileNav" aria-label="Mobile navigation">
             {nav.map(([x,y])=><Link key={y} href={y}>{x}</Link>)}
           </nav>
