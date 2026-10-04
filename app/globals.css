@@ -119,3 +119,11 @@
 @media(max-width:800px){
   .nav{background:#3a2114!important}
 }
+
+.mobileActions{display:none}
+@media(max-width:800px){
+  .mobileActions{display:flex;align-items:center;gap:9px;margin-left:auto}
+  .mobileJoin{display:inline-flex;align-items:center;justify-content:center;background:#f0c343;color:#2b1b12;font-weight:800;font-size:11px;letter-spacing:.02em;padding:10px 14px;border-radius:24px;border:1px solid #f0c343;white-space:nowrap}
+  .mobileMenu{display:flex!important;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid #d9cbb8;border-radius:14px;background:#f7f0e5;color:#3a2114;font-size:0}
+  .mobileMenu:before{content:"☰";font-size:25px;line-height:1}
+}
