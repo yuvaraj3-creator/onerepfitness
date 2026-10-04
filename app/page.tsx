@@ -22,7 +22,7 @@ export default function Home(){
       
       <div className="container heroContent">
         <div className="eyebrow">STRONGER TODAY. BETTER TOMORROW.</div>
-        <h1 className="display"><span>ONE MORE</span> REP<br/><b>FITNESS UNISEX</b></h1>
+        <h1 className="display"><span>ONE MORE</span> <span className="repWord">REP</span><br/><b>FITNESS UNISEX</b></h1>
         <p>A modern fitness space for everyone. Train harder, get stronger, live healthier.</p>
         <div className="actions">
           <Link className="btn primary" href="/programs"><Dumbbell size={17}/> EXPLORE PROGRAMS <ArrowRight size={16}/></Link>
