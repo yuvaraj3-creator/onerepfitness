@@ -160,3 +160,11 @@
   .hamburgerIcon i{display:block!important;width:24px!important;height:2.5px!important;background:#3a2114!important;border-radius:3px!important;margin:0!important;padding:0!important}
   .mobileMenuWrap summary.mobileMenu:before{content:none!important;display:none!important}
 }
+
+.gallerySection{background:#f3eadc}
+.galleryGrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:280px;gap:18px}
+.galleryCard{min-height:280px;border-radius:12px;background-size:cover;background-position:center;position:relative;overflow:hidden;border:1px solid #d9c8b2;box-shadow:0 10px 24px rgba(53,38,27,.08)}
+.galleryCard.featured{grid-column:span 2;grid-row:span 2}
+.galleryCaption{position:absolute;left:0;right:0;bottom:0;padding:22px;color:#fff;font-weight:800;font-size:16px}
+@media(max-width:900px){.galleryGrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:240px}.galleryCard{min-height:240px}.galleryCard.featured{grid-column:span 2;grid-row:span 1}}
+@media(max-width:520px){.galleryGrid{grid-template-columns:1fr;grid-auto-rows:300px;gap:14px}.galleryCard,.galleryCard.featured{grid-column:span 1;grid-row:span 1;min-height:300px}}
