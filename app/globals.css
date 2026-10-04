@@ -136,3 +136,20 @@
   .mobileMenuWrap .mobileMenu{display:flex!important}
   .mobileNav{right:0;left:auto}
 }
+
+/* FINAL MOBILE HEADER OVERRIDE */
+@media (max-width:800px){
+  .navin{display:flex!important;align-items:center!important;justify-content:space-between!important;position:relative!important;overflow:visible!important}
+  .brand{flex:0 0 auto!important;min-width:0!important}
+  .brandLogo{height:64px!important;width:auto!important;max-width:150px!important}
+  .mobileHeaderActions{display:flex!important;align-items:center!important;gap:8px!important;margin-left:auto!important;flex:0 0 auto!important;position:relative!important;z-index:100!important}
+  .mobileJoinOutside{display:inline-flex!important;visibility:visible!important;opacity:1!important;align-items:center!important;justify-content:center!important;gap:5px!important;background:#f0c343!important;color:#2b1b12!important;border:1px solid #f0c343!important;border-radius:24px!important;padding:9px 12px!important;font-size:10px!important;font-weight:900!important;line-height:1!important;white-space:nowrap!important;text-decoration:none!important}
+  .mobileMenuWrap{display:block!important;position:relative!important;z-index:101!important}
+  .mobileMenuWrap summary.mobileMenu{display:flex!important;visibility:visible!important;opacity:1!important;align-items:center!important;justify-content:center!important;width:46px!important;height:46px!important;padding:0!important;margin:0!important;border:1px solid #d9cbb8!important;border-radius:14px!important;background:#f7f0e5!important;color:#3a2114!important;font-size:0!important;list-style:none!important;cursor:pointer!important}
+  .mobileMenuWrap summary.mobileMenu::-webkit-details-marker{display:none!important}
+  .mobileMenuWrap summary.mobileMenu svg{display:block!important;width:25px!important;height:25px!important}
+  .mobileMenuWrap summary.mobileMenu:before{display:none!important;content:none!important}
+  .mobileNav{position:absolute!important;right:0!important;top:56px!important;display:flex!important;flex-direction:column!important;min-width:210px!important;padding:14px!important;background:#3a2114!important;border:1px solid #d6b45a!important;border-radius:12px!important;box-shadow:0 15px 35px rgba(0,0,0,.3)!important;z-index:200!important}
+  .mobileNav a{display:block!important;color:#fff8ed!important;padding:12px 10px!important;font-weight:700!important}
+  .mobileNav .mobileJoin{display:none!important}
+}
