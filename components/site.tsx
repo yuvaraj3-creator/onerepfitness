@@ -1,7 +1,27 @@
+'use client';
+
 import Link from 'next/link';
+import {usePathname} from 'next/navigation';
 import {ArrowRight,MessageCircle} from 'lucide-react';
-export const nav=[['About','/about'],['Programs','/programs'],['Trainers','/trainers'],['Gallery','/gallery'],['Membership','/membership'],['Contact','/contact']];
-export function Header(){return <header className="nav"><div className="container navin"><Link className="brand" href="/"><img className="brandLogo" src="/one-more-rep-logo.svg?v=2" alt="One More Rep Fitness" /></Link><nav className="links">{nav.map(([x,y])=><Link key={y} href={y}>{x}</Link>)}<Link className="btn primary joinBtn" href="https://wa.me/918489895767"><MessageCircle size={18}/> JOIN NOW</Link></nav><span className="mobileMenu">MENU</span></div></header>}
+
+export const nav=[['Home','/'],['About','/about'],['Programs','/programs'],['Trainers','/trainers'],['Gallery','/gallery'],['Membership','/membership'],['Contact','/contact']];
+
+export function Header(){
+  const pathname=usePathname();
+  return <header className="nav">
+    <div className="container navin">
+      <Link className="brand" href="/">
+        <img className="brandLogo" src="/one-more-rep-logo.svg?v=2" alt="One More Rep Fitness" />
+      </Link>
+      <nav className="links">
+        {nav.map(([x,y])=><Link className={pathname===y?'active':''} key={y} href={y}>{x}</Link>)}
+        <Link className="btn primary joinBtn" href="https://wa.me/918489895767"><MessageCircle size={18}/> JOIN NOW</Link>
+      </nav>
+      <span className="mobileMenu">MENU</span>
+    </div>
+  </header>
+}
+
 export function Footer(){return <footer className="footer"><div className="container footerIn"><div>© {new Date().getFullYear()} One More Rep Fitness.</div><div>Tiruvottiyur, Chennai · 84898 95767</div></div></footer>}
 export function Shell({children}:{children:React.ReactNode}){return <><Header/>{children}<Footer/><a className="whatsapp" href="https://wa.me/918489895767">WA</a></>}
 export function PageHero({eyebrow,title,desc}:{eyebrow:string,title:string,desc?:string}){return <section className="pageHero"><div className="container"><div className="eyebrow">{eyebrow}</div><h1 className="display">{title}</h1>{desc&&<p className="prose">{desc}</p>}</div></section>}
