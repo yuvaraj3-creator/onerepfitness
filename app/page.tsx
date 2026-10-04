@@ -14,7 +14,7 @@ const programCards=[
   ['Weight Loss','Burn fat, get fitter','https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=85',Flame],
   ['Muscle Building','Gain lean muscle mass','https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=85',Dumbbell],
   ['General Fitness','Stay active and healthy','https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=85',HeartPulse]
-];
+] as const;
 
 export default function Home(){
   return <Shell><main>
