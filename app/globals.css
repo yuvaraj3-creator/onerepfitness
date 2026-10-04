@@ -9,3 +9,83 @@
 @media(max-width:1000px){.links{gap:18px}.heroVisual{opacity:.65}.programsSection .sectionHead{grid-template-columns:1fr}.programsSection .sectionHead .btn{justify-self:start}}
 @media(max-width:800px){.navin{height:78px}.brandLogo{width:auto;height:64px;max-width:155px}.hero{min-height:640px}.heroVisual{top:0;width:100%;height:100%;opacity:.3}.heroContent{padding:95px 0 115px}.hero h1{margin-top:20px}.links{display:none}.mobileMenu{display:block}.benefitBar{margin-top:-28px}.benefitGrid{border-radius:12px}}
 .program.hasProgramImage{padding-top:0;overflow:hidden}.programThumb{height:185px;margin:0 -28px 24px;background-size:cover;background-position:center}.strengthThumb{background-image:linear-gradient(180deg,rgba(31,23,18,.05),rgba(31,23,18,.28)),url('https://images.unsplash.com/photo-1738524107560-5d10ca075666?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=85&w=1400')}.aboutImageGrid{display:grid;grid-template-columns:1.35fr .8fr;grid-template-rows:220px 150px;gap:18px;margin:10px 0 28px}.aboutPhoto{border-radius:12px;background-size:cover;background-position:center;border:1px solid #d8c7b0;box-shadow:0 12px 28px rgba(53,38,27,.08)}.aboutPhotoMain{grid-row:1 / span 2;background-image:linear-gradient(180deg,rgba(39,28,20,.05),rgba(39,28,20,.2)),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85')}.aboutPhotoSide{background-image:linear-gradient(180deg,rgba(39,28,20,.05),rgba(39,28,20,.18)),url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1000&q=85')}.aboutPhotoSmall{background-image:linear-gradient(180deg,rgba(39,28,20,.05),rgba(39,28,20,.18)),url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1000&q=85')}.featureList{margin-top:0}@media(max-width:800px){.aboutImageGrid{grid-template-columns:1fr;grid-template-rows:260px 180px 180px}.aboutPhotoMain{grid-row:auto}}
+.mobileNav{display:none}
+
+@media(max-width:800px){
+  .nav{position:sticky;top:0}
+  .navin{height:78px;position:relative}
+  .brandLogo{height:62px;max-width:145px}
+  .links{display:none}
+  .mobileMenu{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:44px;
+    height:44px;
+    padding:0;
+    border:1px solid #d9c8b2;
+    border-radius:10px;
+    background:#fffaf2;
+    color:#4a392e;
+    cursor:pointer;
+    z-index:70;
+  }
+  .mobileMenu:hover{background:#f3eadc;color:#a97c1d}
+  .mobileNav{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+    top:calc(100% + 8px);
+    left:0;
+    right:0;
+    padding:10px;
+    background:rgba(255,250,242,.98);
+    border:1px solid #d9c8b2;
+    border-radius:14px;
+    box-shadow:0 18px 40px rgba(53,38,27,.16);
+    z-index:65;
+  }
+  .mobileNav a{
+    display:flex;
+    align-items:center;
+    min-height:46px;
+    padding:12px 14px;
+    border-radius:9px;
+    font-size:14px;
+    font-weight:700;
+  }
+  .mobileNav a:not(.btn):hover{
+    background:#f1e7d7;
+    color:#a97c1d;
+  }
+  .mobileNav .mobileJoin{
+    margin-top:6px;
+    justify-content:center;
+    border-radius:28px;
+    background:#d8ad45;
+    color:#2b2019;
+  }
+  .container{width:calc(100% - 28px)}
+  .section{padding:65px 0}
+  .pageHero{padding:72px 0 52px}
+  .pageHero h1{font-size:clamp(54px,15vw,82px)}
+  .prose{font-size:14px}
+  .heroContent{width:calc(100% - 28px);padding:82px 0 100px}
+  .hero h1{font-size:clamp(52px,15vw,82px);max-width:100%;word-break:normal}
+  .hero p{font-size:15px;max-width:100%}
+  .actions{display:grid;grid-template-columns:1fr;gap:10px}
+  .actions .btn{width:100%}
+  .stats{width:100%;max-width:none;margin-top:34px}
+  .sectionHead h2{font-size:clamp(40px,12vw,62px)}
+  .contactInfo,.contactForm,.price,.trainer{padding:22px}
+  .trainerImg{margin:-22px -22px 18px;height:250px}
+  .program{padding:22px;min-height:280px}
+  .programThumb{margin:0 -22px 22px;height:180px}
+  .benefitGrid{grid-template-columns:1fr}
+  .benefit{border-right:0!important;border-bottom:1px solid #d9cbb8}
+  .benefit:last-child{border-bottom:0}
+  .programShowcase{grid-template-columns:1fr}
+  .showCard{min-height:300px}
+  .footerIn{gap:10px}
+}
