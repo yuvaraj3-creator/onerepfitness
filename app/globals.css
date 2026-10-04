@@ -99,3 +99,14 @@
 /* One More Rep chocolate brand header */
 .nav{background:#3b2418!important;border-bottom:1px solid rgba(214,180,90,.28)!important}
 @media(max-width:800px){.nav{background:#3b2418!important}}
+
+/* Desktop navigation contrast */
+@media(min-width:801px){
+  .nav{background:#6b452f!important;border-bottom:2px solid #d6b45a!important;box-shadow:0 4px 18px rgba(30,18,10,.25)!important}
+  .links{color:#fff8ed!important}
+  .links a:not(.btn){color:#fff8ed!important}
+  .links a:not(.btn):hover{color:#f0c343!important}
+  .links a:not(.btn):first-child{color:#f0c343!important}
+  .links a:not(.btn):first-child:after{background:#f0c343!important}
+  .joinBtn{background:#f0c343!important;color:#2b1b12!important;border-color:#f0c343!important}
+}
