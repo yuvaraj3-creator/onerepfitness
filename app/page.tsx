@@ -19,7 +19,7 @@ const programCards=[
 export default function Home(){
   return <Shell><main>
     <section className="hero">
-      <div className="heroVisual"><img src="/one-more-rep-logo.svg" alt="One More Rep Fitness Unisex" /></div>
+      
       <div className="container heroContent">
         <div className="eyebrow">STRONGER TODAY. BETTER TOMORROW.</div>
         <h1 className="display"><span>ONE MORE</span> REP<br/><b>FITNESS UNISEX</b></h1>
