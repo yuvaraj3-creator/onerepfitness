@@ -153,3 +153,10 @@
   .mobileNav a{display:block!important;color:#fff8ed!important;padding:12px 10px!important;font-weight:700!important}
   .mobileNav .mobileJoin{display:none!important}
 }
+
+@media(max-width:800px){
+  .mobileMenuWrap summary.mobileMenu{width:46px!important;height:46px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+  .hamburgerIcon{width:24px!important;height:20px!important;display:flex!important;flex-direction:column!important;justify-content:space-between!important;align-items:stretch!important}
+  .hamburgerIcon i{display:block!important;width:24px!important;height:2.5px!important;background:#3a2114!important;border-radius:3px!important;margin:0!important;padding:0!important}
+  .mobileMenuWrap summary.mobileMenu:before{content:none!important;display:none!important}
+}
