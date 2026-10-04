@@ -1,19 +1,44 @@
+'use client';
+
+import {useState} from 'react';
 import Link from 'next/link';
-import {ArrowRight,MessageCircle} from 'lucide-react';
+import {ArrowRight,MessageCircle,Menu,X} from 'lucide-react';
 
 export const nav=[['Home','/'],['About','/about'],['Programs','/programs'],['Trainers','/trainers'],['Gallery','/gallery'],['Membership','/membership'],['Contact','/contact']];
 
 export function Header(){
+  const [open,setOpen]=useState(false);
+  const close=()=>setOpen(false);
+
   return <header className="nav">
     <div className="container navin">
-      <Link className="brand" href="/">
+      <Link className="brand" href="/" onClick={close}>
         <img className="brandLogo" src="/one-more-rep-logo.svg?v=2" alt="One More Rep Fitness" />
       </Link>
+
       <nav className="links">
         {nav.map(([x,y])=><Link key={y} href={y}>{x}</Link>)}
-        <Link className="btn primary joinBtn" href="https://wa.me/918489895767"><MessageCircle size={18}/> JOIN NOW</Link>
+        <Link className="btn primary joinBtn" href="https://wa.me/918489895767">
+          <MessageCircle size={18}/> JOIN NOW
+        </Link>
       </nav>
-      <span className="mobileMenu">MENU</span>
+
+      <button
+        className={`mobileMenu ${open?'open':''}`}
+        type="button"
+        aria-label={open?'Close navigation':'Open navigation'}
+        aria-expanded={open}
+        onClick={()=>setOpen(v=>!v)}
+      >
+        {open?<X size={25}/>:<Menu size={25}/>}
+      </button>
+
+      {open&&<nav className="mobileNav" aria-label="Mobile navigation">
+        {nav.map(([x,y])=><Link key={y} href={y} onClick={close}>{x}</Link>)}
+        <Link className="btn primary mobileJoin" href="https://wa.me/918489895767" onClick={close}>
+          <MessageCircle size={18}/> JOIN NOW
+        </Link>
+      </nav>}
     </div>
   </header>
 }
