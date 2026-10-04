@@ -17,17 +17,19 @@ export function Header(){
         </Link>
       </nav>
 
-      <details className="mobileMenuWrap">
-        <summary className="mobileMenu" aria-label="Open navigation">
-          <Menu size={25}/>
-        </summary>
-        <nav className="mobileNav" aria-label="Mobile navigation">
-          {nav.map(([x,y])=><Link key={y} href={y}>{x}</Link>)}
-          <Link className="btn primary mobileJoin" href="https://wa.me/918489895767">
-            <MessageCircle size={18}/> JOIN NOW
-          </Link>
-        </nav>
-      </details>
+      <div className="mobileHeaderActions">
+        <Link className="mobileJoinOutside" href="https://wa.me/918489895767">
+          <MessageCircle size={16}/> JOIN NOW
+        </Link>
+        <details className="mobileMenuWrap">
+          <summary className="mobileMenu" aria-label="Open navigation">
+            <Menu size={25}/>
+          </summary>
+          <nav className="mobileNav" aria-label="Mobile navigation">
+            {nav.map(([x,y])=><Link key={y} href={y}>{x}</Link>)}
+          </nav>
+        </details>
+      </div>
     </div>
   </header>
 }
